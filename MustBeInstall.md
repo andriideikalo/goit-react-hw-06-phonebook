@@ -37,11 +37,16 @@ $ lodash core -o ./dist/lodash.core.js       https://github.com/lodash/lodash   
 <!--                https://github.com/TanStack/query    хуки для http запитів -->
 
 <!--npm i react-use                     https://github.com/streamich/react-use       кастомні хуки -->
+
 <!--npm install @streamich/react-use    https://github.com/streamich/react-use/pkgs/npm/react-use                           -->
-<!-- npm i react-router-dom             https://www.npmjs.com/package/react-router-dom                             Пакет
-                                                                                                                react-router-dom містить прив’язки для використання React Router у веб-додатках.-->
-<!-- npm i react-toastify                https://www.npmjs.com/package/react-toastify                 повіщення до  програми.-->
-<!-- npm install --save react-toastify -->
+
+<!-- npm i react-router-dom
+https://www.npmjs.com/package/react-router-dom
+Пакет react-router-dom містить прив’язки для використання React Router у веб-додатках.-->
+
+<!-- npm i react-toastify  &&  npm install --save react-toastify
+https://www.npmjs.com/package/react-toastify
+оповіщення до  програми.-->
 
 <!-- npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6
  https://github.com/chakra-ui/chakra-ui/     &&    https://chakra-ui.com/
