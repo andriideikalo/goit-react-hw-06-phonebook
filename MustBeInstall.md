@@ -48,13 +48,7 @@ https://www.npmjs.com/package/react-router-dom
 https://www.npmjs.com/package/react-toastify
 оповіщення до  програми.-->
 
-<!-- # Redux + Plain JS template -->
-<!-- npx create-react-app my-app --template redux
-https://redux-toolkit.js.org/introduction/getting-started
-Офіційний набір інструментів із батарейками для ефективної розробки Redux-->
-<!-- && -->
-<!-- # Redux + TypeScript template -->
-<!-- npx create-react-app my-app --template redux-typescript
+<!-- npm install react-redux
 https://redux-toolkit.js.org/introduction/getting-started
 Офіційний набір інструментів із батарейками для ефективної розробки Redux-->
 
