@@ -42,6 +42,3 @@ $ lodash core -o ./dist/lodash.core.js       https://github.com/lodash/lodash   
                                                                                                                 react-router-dom містить прив’язки для використання React Router у веб-додатках.-->
 <!-- npm i react-toastify                https://www.npmjs.com/package/react-toastify                 повіщення до  програми.-->
 <!-- npm install --save react-toastify -->
-
-<!-- ______________ -->
-<!-- ______________ -->
