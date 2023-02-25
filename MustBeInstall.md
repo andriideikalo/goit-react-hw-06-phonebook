@@ -42,3 +42,11 @@ $ lodash core -o ./dist/lodash.core.js       https://github.com/lodash/lodash   
                                                                                                                 react-router-dom містить прив’язки для використання React Router у веб-додатках.-->
 <!-- npm i react-toastify                https://www.npmjs.com/package/react-toastify                 повіщення до  програми.-->
 <!-- npm install --save react-toastify -->
+
+<!-- npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6
+ https://github.com/chakra-ui/chakra-ui/     &&    https://chakra-ui.com/
+ Chakra UI — це проста, модульна та доступна бібліотека компонентів, яка дає вам будівельні блоки, необхідні для створення ваших програм React.-->
+
+<!-- npm install @mui/material @emotion/react @emotion/styled
+ https://mui.com/
+ MUI пропонує повний набір інструментів інтерфейсу користувача, які допоможуть вам швидше запроваджувати нові функції. Почніть із Material UI, нашої повністю завантаженої бібліотеки компонентів, або додайте свою власну систему дизайну до наших готових до виробництва компонентів.-->
