@@ -48,6 +48,10 @@ https://www.npmjs.com/package/react-router-dom
 https://www.npmjs.com/package/react-toastify
 оповіщення до  програми.-->
 
+<!-- npm install redux
+ https://redux.js.org/
+ -->
+
 <!-- npm install react-redux
 https://redux-toolkit.js.org/introduction/getting-started
 Офіційний набір інструментів із батарейками для ефективної розробки Redux-->
