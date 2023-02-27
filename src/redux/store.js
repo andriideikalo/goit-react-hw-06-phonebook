@@ -1,19 +1,28 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { createAction, createReducer } from '@reduxjs/toolkit';
+import {
+  persistStore,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist';
+import { contactsReducer } from './contactsSplice';
+// import { persistedContactsReducer } from './contactsSlice';
 
-const addContact = createAction('contact/add');
-const remooveContact = createAction('contact/remove');
-// console.log(increment(100));
-
-export const myReduser = createReducer([], {
-  [addContact]: (state, action) => state.push(action.payload),
-  [remooveContact]: (state, action) =>
-    state.filter(item => item.id !== action.payload),
-});
+// const rootReducer = combineReducers({ contacts: persistedContactsReducer });
 
 export const store = configureStore({
   reducer: {
-    contacts: addContact,
-    filter: '',
+    contacts: contactsReducer,
   },
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 });
+
+export const persistor = persistStore(store);

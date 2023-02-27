@@ -40,19 +40,8 @@ export default function App() {
     setContacts(prevState => prevState.filter(contact => contact.id !== id));
   };
 
-  // useEffect(() => {
-  //   console.log('Notiflix');
-  //   const contacts = localStorage.getItem('contacts');
-  //   const parsedContacts = JSON.parse(contacts);
-  //   if (!parsedContacts) {
-  //     Notiflix.Notify.success('No contacts found. Add contacts. ', {
-  //       timeout: 3000,
-  //     });
-  //   }
-  // }, [contacts]);
-
   useEffect(() => {
-    console.log('didmount');
+    // console.log('didmount');
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
