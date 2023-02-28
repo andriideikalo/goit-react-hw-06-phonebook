@@ -33,21 +33,7 @@ export const contactsSlice = createSlice({
     filter: '',
   },
   reducers: {
-    addContact(state, action) {
-      if (
-        state.contacts.find(
-          ({ name }) =>
-            name.toLowerCase() === action.payload.name.trim().toLowerCase()
-        )
-      ) {
-        alert(`${action.payload.name} is already in your contacts.`);
-        return;
-      }
-      return {
-        ...state,
-        contacts: [...state.contacts, action.payload],
-      };
-    },
+    addContact(state, action) {},
     deleteContact(state, action) {
       state.contacts = state.contacts.filter(({ id }) => id !== action.payload);
     },
