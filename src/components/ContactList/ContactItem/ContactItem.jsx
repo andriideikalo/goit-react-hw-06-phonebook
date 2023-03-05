@@ -4,19 +4,14 @@ import { ContactItemStyled } from './ContactItemStyled';
 import { ContactNameItemStyled } from './ContactItemStyled';
 import { ButtonItemStyled } from './ContactItemStyled';
 
-import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../../redux/contactsSplice';
-
-const ContactItem = ({ contact }) => {
+const ContactItem = ({ contact, onDelete }) => {
   const { id, name, number } = contact;
-  const dispatch = useDispatch();
-
   return (
     <ContactItemStyled>
       <ContactNameItemStyled>
         {name}: {number}
       </ContactNameItemStyled>
-      <ButtonItemStyled onClick={() => dispatch(deleteContact(id))}>
+      <ButtonItemStyled onClick={() => onDelete(id)} type="button">
         Delete
       </ButtonItemStyled>
     </ContactItemStyled>
