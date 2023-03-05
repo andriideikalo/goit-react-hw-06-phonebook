@@ -20,5 +20,4 @@ const persistConfig = {
 };
 
 export const { setFilter } = filterSlice.actions;
-// export const filterReducer = filterSlice.reducer;
 export const filterReducer = persistReducer(persistConfig, filterSlice.reducer);
