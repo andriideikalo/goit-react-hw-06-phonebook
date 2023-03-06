@@ -10,9 +10,9 @@ import {
 
 const ContactList = () => {
   const dispatch = useDispatch();
-  const tasksList = useSelector(contactSelector);
+  const contactList = useSelector(contactSelector);
   const filterQuery = useSelector(filterSelector);
-  const visibleList = tasksList.filter(item =>
+  const visibleList = contactList.filter(item =>
     item.name.toLowerCase().includes(filterQuery)
   );
 

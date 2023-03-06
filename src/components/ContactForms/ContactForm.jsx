@@ -38,7 +38,7 @@ const ContactForm = () => {
         actions.resetForm();
       }}
     >
-      <LabelStyled htmlFor="contact">
+      <LabelStyled htmlFor="name">
         Name
         <InputStyled
           type="text"
