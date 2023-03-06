@@ -14,6 +14,12 @@ const contactsState = {
     { id: 'id-7', name: 'Andrey', number: '227-91-29' },
     { id: 'id-8', name: 'Pavel', number: '227-91-30' },
     { id: 'id-9', name: 'Tanya', number: '227-91-31' },
+    { id: 'id-10', name: 'THermione', number: '227-91-32' },
+    { id: 'id-11', name: 'Eden', number: '227-91-33' },
+    { id: 'id-12', name: 'Eden Tanya', number: '227-91-34' },
+    { id: 'id-13', name: 'Kline Tanya', number: '227-91-35' },
+    { id: 'id-14', name: 'Simpson Tanya', number: '227-91-36' },
+    { id: 'id-15', name: 'Rosie Tanya', number: '227-91-37' },
   ],
 };
 

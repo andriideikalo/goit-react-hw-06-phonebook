@@ -14,13 +14,14 @@ const initialValues = {
   name: '',
   number: '',
 };
-
+// console.log(initialValues);
 const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(contactSelector);
 
   return (
     <FormStyled
+      name="contact"
       initialValues={initialValues}
       onSubmit={(values, actions) => {
         const { name, number } = values;
@@ -37,8 +38,8 @@ const ContactForm = () => {
         actions.resetForm();
       }}
     >
-      <LabelStyled htmlFor="name">
-        Full Name
+      <LabelStyled htmlFor="contact">
+        Name
         <InputStyled
           type="text"
           name="name"
@@ -47,7 +48,6 @@ const ContactForm = () => {
           required
         ></InputStyled>
       </LabelStyled>
-      <br />
       <LabelStyled htmlFor="number">
         Number
         <InputStyled
@@ -62,5 +62,6 @@ const ContactForm = () => {
     </FormStyled>
   );
 };
+console.log(initialValues);
 
 export default ContactForm;
