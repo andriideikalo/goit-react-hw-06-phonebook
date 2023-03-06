@@ -1,28 +1,25 @@
 import { PropTypes } from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
 import ContactItem from './ContactItem/ContactItem';
 
-const ContactList = ({ contacts }) => {
+const ContactList = ({ items, onDelete }) => {
   return (
     <ol>
-      {contacts.map(contact => (
-        <ContactItem key={contact.id} contact={contact} />
+      {items.map(item => (
+        <ContactItem key={item.id} onDelete={onDelete} contact={item} />
       ))}
     </ol>
   );
 };
 
 ContactList.propTypes = {
-  contacts: PropTypes.arrayOf(
+  items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
     })
   ),
+
+  onDelete: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({
-  contacts: state.contacts.items,
-});
-
-export default connect(mapStateToProps)(ContactList);
+export default ContactList;
