@@ -1,11 +1,7 @@
-// import { useState } from 'react';
-// import { nanoid } from 'nanoid';
-// import PropTypes from 'prop-types';
 import { FormStyled } from './ContactFormStyled';
 import { InputStyled } from './ContactFormStyled';
 import { LabelStyled } from './ContactFormStyled';
 import { BottonStyled } from './ContactFormStyled';
-
 import { addContact } from '../../redux/contactsSplice';
 import { useDispatch, useSelector } from 'react-redux';
 import { contactSelector } from '../../redux/selectors';
@@ -25,6 +21,7 @@ const ContactForm = () => {
       initialValues={initialValues}
       onSubmit={(values, actions) => {
         const { name, number } = values;
+
         const isNameInContacts = contacts.find(
           item => item.name.toLowerCase() === name.toLowerCase()
         );
@@ -62,6 +59,6 @@ const ContactForm = () => {
     </FormStyled>
   );
 };
-console.log(initialValues);
+// console.log(initialValues);
 
 export default ContactForm;

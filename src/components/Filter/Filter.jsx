@@ -1,6 +1,5 @@
-// import { PropTypes } from 'prop-types';
 import React from 'react';
-// import { nanoid } from 'nanoid';
+
 import { InputFilterStyled } from './FilterStyled';
 import { FilterLabelStyled } from './FilterStyled';
 import { setFilter } from '../../redux/filterSplice';
@@ -10,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 const Filter = () => {
   const dispatch = useDispatch();
   const filter = useSelector(filterSelector);
-  const inputHandleChacge = evt => {
+  const inputHandleChange = evt => {
     dispatch(setFilter(evt.target.value));
   };
   return (
@@ -20,7 +19,7 @@ const Filter = () => {
         <InputFilterStyled
           type="text"
           value={filter}
-          onChange={inputHandleChacge}
+          onChange={inputHandleChange}
           name="filter"
         />
       </FilterLabelStyled>
