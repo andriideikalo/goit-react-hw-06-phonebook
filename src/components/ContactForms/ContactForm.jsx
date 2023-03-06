@@ -8,7 +8,7 @@ import { BottonStyled } from './ContactFormStyled';
 
 import { addContact } from '../../redux/contactsSplice';
 import { useDispatch, useSelector } from 'react-redux';
-import { tasksSelector } from '../../redux/selectors';
+import { contactSelector } from '../../redux/selectors';
 
 const initialValues = {
   name: '',
@@ -17,19 +17,20 @@ const initialValues = {
 
 const ContactForm = () => {
   const dispatch = useDispatch();
-  const tasks = useSelector(tasksSelector);
+  const contacts = useSelector(contactSelector);
 
   return (
     <FormStyled
       initialValues={initialValues}
       onSubmit={(values, actions) => {
         const { name, number } = values;
-        const isNameInContacts = tasks.find(
+        const isNameInContacts = contacts.find(
           item => item.name.toLowerCase() === name.toLowerCase()
         );
-        if (isNameInContacts) {
-          alert('Sorry >±< this contact already in list ⬇️');
-          actions.resetForm();
+        if (
+          isNameInContacts.filter(contact => contact.name === name).length > 0
+        ) {
+          alert(`${name} is already in contacts`);
           return;
         }
         dispatch(addContact({ name, number }));

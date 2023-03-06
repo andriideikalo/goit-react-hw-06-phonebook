@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { tasksSelector, filterSelector } from 'redux/selectors';
+import { contactSelector, filterSelector } from 'redux/selectors';
 import { deleteContact } from '../../redux/contactsSplice';
 import {
   ContactItemStyled,
@@ -10,7 +10,7 @@ import {
 
 const ContactList = () => {
   const dispatch = useDispatch();
-  const tasksList = useSelector(tasksSelector);
+  const tasksList = useSelector(contactSelector);
   const filterQuery = useSelector(filterSelector);
   const visibleList = tasksList.filter(item =>
     item.name.toLowerCase().includes(filterQuery)
@@ -37,16 +37,5 @@ const ContactList = () => {
     </ol>
   );
 };
-
-// ContactList.propTypes = {
-//   contactsList: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string.isRequired,
-//       name: PropTypes.string.isRequired,
-//       number: PropTypes.string.isRequired,
-//     })
-//   ),
-//   onDelete: PropTypes.func.isRequired,
-// };
 
 export default ContactList;
