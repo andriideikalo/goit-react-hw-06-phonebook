@@ -1,31 +1,25 @@
-import { PropTypes } from 'prop-types';
-import React from 'react';
-import { ContactItemStyled } from './ContactItemStyled';
-import { ContactNameItemStyled } from './ContactItemStyled';
-import { ButtonItemStyled } from './ContactItemStyled';
+// import React from 'react';
+// import { ContactItemStyled } from './ContactItemStyled';
+// import { ContactNameItemStyled } from './ContactItemStyled';
+// import { ButtonItemStyled } from './ContactItemStyled';
+// import { useDispatch } from 'react-redux';
 
-const ContactItem = ({ contact, onDelete }) => {
-  const { id, name, number } = contact;
-  return (
-    <ContactItemStyled>
-      <ContactNameItemStyled>
-        {name}: {number}
-      </ContactNameItemStyled>
-      <ButtonItemStyled onClick={() => onDelete(id)} type="button">
-        Delete
-      </ButtonItemStyled>
-    </ContactItemStyled>
-  );
-};
+// import { deleteTask } from '../../../redux/contactsSplice';
 
-ContactItem.propTypes = {
-  contact: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
-  }),
+// const ContactItem = ({ contact }) => {
+//   const dispatch = useDispatch();
 
-  onDelete: PropTypes.func,
-};
+//   const { id, name, number } = contact;
+//   return (
+//     <ContactItemStyled>
+//       <ContactNameItemStyled>
+//         {name}: {number}
+//       </ContactNameItemStyled>
+//       <ButtonItemStyled onClick={() => dispatch(deleteTask(id))} type="button">
+//         Delete
+//       </ButtonItemStyled>
+//     </ContactItemStyled>
+//   );
+// };
 
-export default ContactItem;
+// export default ContactItem;
