@@ -14,6 +14,7 @@ export const BottonStyled = styled.button`
   background-color: lightgray;
   border-radius: 5px;
   border: none;
+  margin: 10px;
   &:hover,
   &:focus {
     background-color: blue;
